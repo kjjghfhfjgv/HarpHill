@@ -10,7 +10,6 @@ const CitySuggestions = ({
   onHide,
 }) => {
   if (!open) return;
-  console.log({ isLoading });
 
   if (isLoading) {
     return (
@@ -18,6 +17,9 @@ const CitySuggestions = ({
         <div className={styles.dropdown}>
           <div className="loading">Loading...</div>
         </div>
+        <button className={styles.close} onClick={onHide}>
+          <X width={15} height={15} />
+        </button>
       </div>
     );
   }
@@ -28,6 +30,9 @@ const CitySuggestions = ({
         <div className={styles.dropdown}>
           <div className="loading">No cities found</div>
         </div>
+        <button className={styles.close} onClick={onHide}>
+          <X width={15} height={15} />
+        </button>
       </div>
     );
   }

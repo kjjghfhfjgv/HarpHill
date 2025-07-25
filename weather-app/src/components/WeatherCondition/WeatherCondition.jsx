@@ -4,8 +4,6 @@ import { WeatherDataContext } from "../../context/WeatherDataProvider";
 const WeatherCondition = () => {
   const { weatherData } = useContext(WeatherDataContext);
 
-  console.log({ weatherData });
-
   return (
     <div className="weather-condition">
       <h2>Weather Condition</h2>
